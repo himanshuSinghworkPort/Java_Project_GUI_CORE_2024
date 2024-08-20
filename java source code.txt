@@ -1,0 +1,514 @@
+import java.lang.*;
+import java.io.*;
+class Sample1
+{ 
+int var1;
+var1=10;
+
+ // int var1=10;
+void method1()
+{
+System.out.println("hello world");
+}
+public static void main(String[] args)
+{
+Sample1 ob1=new Sample1();
+Sample2 ob2=new Sample2();
+System.out.println(ob1.var1);
+ob1.method1();
+System.out.println(ob2.var3);
+}
+}
+class Sample2
+{
+int var3;
+var3=20;
+
+//int var3=20;
+}
+
+
+//****************************************************************
+
+
+
+import java.util.Scanner;
+class Test_26_july
+{
+public static void main(String[] args)
+{
+boolean b=true;
+System.out.println(b);
+Scanner sc=new Scanner(System.in);
+Scanner sc1=new Scanner(System.in);
+System.out.println("enetr main string");
+String str=sc.nextLine();
+System.out.println(str);
+//char charAt[int i] it is used to retrieve single charecter from string.
+System.out.println("enter the position which you want from string");
+int i=sc.nextInt();
+
+System.out.println(str.charAt(i));
+/* contains: it is used to determine whether substring is a part of main string. string_main.contains(sub_string)
+return type is boolean
+*/
+System.out.println("enetr substring");
+String str2=sc1.nextLine();
+// System.out.println(str.contains(str2));
+if(str.contains(str2))
+{
+System.out.println("it is a part of svinfotech");
+}
+String[] split1=str.split(str2);
+System.out.println(split1);
+for(String obj:split1)
+{
+
+System.out.print(obj);
+System.out.print(" ");
+}
+
+/* split it is used to seperate the given string into multiple strings seperated by delimeters 
+*/
+
+/* indexOf: it is used to perform a search operation for a specific charecter or a substring on the main string.
+string_name.indexOf('character')
+*/
+System.out.println("enter the string for search operation");
+
+System.out.println("enter charecter which you want to perform operation");
+Scanner sc2=new Scanner(System.in);
+String c=sc2.nextLine();
+System.out.println("index of"+c+"is-"+str.indexOf(c));
+}
+}
+
+
+
+//********************************************************************************************************************************
+
+
+import java.io.*;
+import java.util.*;
+class Test_26_july_e
+{
+public static void main(String[] arg)throws IOException
+	{
+	Scanner sc=new Scanner(System.in);
+	// BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	System.out.println("enter the buffered reader stream string ");
+	String str="himanshu"; // string as a literal 
+	String str1=new String("himanshu"); //string as a object
+	String str3;	
+	str3=sc.nextLine();
+	String str4;
+	Scanner sc1=new Scanner(System.in);	
+	str4=sc1.nextLine();
+	System.out.println(str3+" "+str4+" is a good programmer "+str3+" got hacked");
+	// br.readLine();
+	
+	}
+}
+
+
+//**********************************************************************************************************************************
+
+
+/* 
+class is blueprint for the real world entity.
+object is real world entity
+access modifier class class_name
+{
+data members;
+data type var_name; initialisation
+var_name=value;      definition
+data type var=value;
+int a;
+int a=10;
+int a,b;
+int a=10,b=20;
+
+methods;
+return type method name(parameters)
+	{
+	}
+method();
+}
+exAMPLE:
+*/
+class Test_26_july_e2
+{
+int a=10;
+int b=20;
+void display()
+{
+System.out.println("this is programming");
+}
+public static void main(String[] arg)
+{
+// class_name object_name=new class_name();
+	Test_26_july_e2 ob=new Test_26_july_e2();
+	System.out.println(ob.a);
+	System.out.println(ob.b);
+	ob.display();
+}
+}
+
+
+//***********************************************************************************************
+
+
+class Animal
+{
+void mew()
+	{
+	System.out.println("mew");
+	}
+
+
+void wakeup()
+	{
+	System.out.println("wake up");
+	}
+
+void eat()
+	{
+	System.out.println("eating");
+	}
+void bark()
+	{
+	System.out.println("barking");
+	}
+void sleep()
+	{
+	System.out.println("sleeping");
+	}	
+	
+}
+class Bird extends Animal
+	{
+	void fly()
+		{
+		System.out.println("flying");
+		}
+	}
+class Test_27_july_e
+{
+
+public static void main(String[] arg)
+	{
+	Animal dog=new Animal();
+	Animal cat=new Animal();
+	dog.wakeup();
+	dog.eat();
+	dog.bark();
+	dog.sleep();
+	cat.mew();
+	cat.sleep();
+	Bird eagle=new Bird();
+	 eagle.wakeup();
+	 eagle.eat();
+	 eagle.fly();
+	 eagle.sleep();
+	}
+	
+}
+
+
+
+//****************************************************************************************
+
+
+import java.util.Scanner;
+class Arthm
+	{
+	int i,j;
+	int z=0;
+	void input_val()
+	{
+
+	System.out.println("enter variable value1: ");
+	Scanner sc=new Scanner(System.in);
+	this.i=sc.nextInt();
+	System.out.println("enter variable value2: ");
+	Scanner sc1=new Scanner(System.in);
+	this.j=sc1.nextInt();
+	}
+	void arth_op_add()
+	{
+	//this.z=z;
+	this.z=this.i+this.j;
+	System.out.println("the addition is "+this.z);
+	
+	
+	}
+	}
+
+	
+class Test_27_july_e2
+{
+public static void main(String[] arg)
+	{
+	Arthm ob=new Arthm();
+	ob.input_val();
+	ob.arth_op_add();	
+	}
+}
+
+
+//***************************************************************************************************
+
+
+import java.util.Scanner;
+class Test_27_july2
+{
+	String str;
+void str_input()
+	{
+	System.out.println("enter the string to input");
+	
+	Scanner sc=new Scanner(System.in);
+	str=sc.nextLine();
+	this.str=str;
+	}
+void str_display()
+	{
+	System.out.println("the input string is "+str);
+	}
+void str_replace()
+	{
+	Scanner sc2=new Scanner(System.in);
+	System.out.println("enter the original charecter which you want to replace with");
+	char rep_o=sc2.next().charAt(0);
+	Scanner sc3=new Scanner(System.in);
+	System.out.println("enter the replacement charecter which you want in your string");
+	char rep_r=sc2.next().charAt(0);
+	String str_rp=this.str.replace(rep_o,rep_r);
+	System.out.println("the replaced string is");
+	System.out.println(str_rp);
+	}
+void str_substring()
+	{
+	System.out.println("enter the index positions");
+	int i=0,j=0;
+	System.out.println("enter the first index of the substring");
+	Scanner sc4=new Scanner(System.in);
+	i=sc4.nextInt();
+	System.out.println("enter the first index of the substring");
+	Scanner sc5=new Scanner(System.in);
+	j=sc5.nextInt();
+	String str_sub=this.str.substring(i,j);
+	System.out.println("the subString is "+str_sub);
+	}
+/* void comp()
+	{
+	System.out.println("enter the second string");
+	Test_27_july2 ob1=new Test_27_july2();
+	ob1.str_input();
+	
+	}
+*/
+	public static void main(String[] args)
+	{
+	Test_27_july2 ob=new Test_27_july2();
+	ob.str_input();
+	ob.str_display();
+	ob.str_replace();
+	ob.str_substring();
+	
+	
+	}	
+}
+
+
+//*********************************************************************************************************8
+
+
+
+
+import java.util.*;
+import java.io.*;
+class Emp
+{
+int id;
+String name;
+Emp(int i,String n)
+{
+id=i;
+name=n;
+}
+void display()
+{
+System.out.println("id is: "+id+"\t name is:"+name);
+}
+}
+class Test_Emp_Data
+{
+public static void main(String[] args)throws IOException
+{
+Scanner sc=new Scanner(System.in);
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("ENTER THE NUMBER OF EMPLOYEES FOR WHICH YOU WANT TO STORE THE DATA");
+int no=sc.nextInt();
+Emp arr[]=new Emp[no];
+for(int i=0;i<no;i++)
+{
+System.out.println("enter id no");
+int id=Integer.parseInt(br.readLine());
+System.out.println("enter name:");
+String name=br.readLine();
+arr[i]=new Emp(id,name);
+} 
+System.out.println("employee data is:");
+for(int i=0;i<arr.length;i++)
+{
+
+arr[i].display();
+} 
+
+
+}
+}
+
+
+//*********************************************************************************************************************
+
+
+
+
+class Animal
+{
+static void wakeup()
+{System.out.println("wake up");}
+static void  eat()
+{System.out.println("eats");}
+static void  sleep()
+{System.out.println("sleep");}
+}
+class Dog extends Animal
+{
+static void bark()
+{System.out.println("barks");}
+}
+class Bird extends Animal
+{
+static void  fly()
+{System.out.println("fly");}
+}
+public class Test05_aug
+{
+public static void main(String args[])
+{
+Dog sheru=new Dog();
+Dog moti=new Dog();
+sheru.wakeup();
+sheru.eat();
+sheru.bark();
+sheru.sleep();
+moti.wakeup();
+moti.eat();
+moti.bark();
+moti.sleep();
+Bird tweety=new Bird();
+tweety.wakeup();
+tweety.eat();
+tweety.fly();
+tweety.sleep();
+}
+}
+
+//*********************************************************************************************************
+
+
+import java.util.Scanner;
+class Ex_even_odd
+{
+
+public static void main(String[] arg)
+{
+Scanner sc=new Scanner(System.in);
+Ex_even_odd no=new Ex_even_odd();
+System.out.println("enter the input number");
+int i=sc.nextInt();
+if(i%2==0)
+	{
+	System.out.println("the number "+i+" is even");
+	}
+else
+	{
+	System.out.println("the number "+i+" is odd");
+	} 
+}
+}
+
+
+//**********************************************************************************************************************
+
+
+
+
+import java.util.Scanner;
+class Ex_logical
+{
+
+public static void main(String[] arg)
+{
+Scanner sc=new Scanner(System.in);
+//Ex_even_odd no=new Ex_even_odd();
+System.out.println("enter the input number1:");
+int i=sc.nextInt();
+System.out.println("enter the input number2:");
+int j=sc.nextInt();
+if(i%2==0&&j%5==0)
+	{
+	System.out.println("the both no are divisible by 2 and 5");
+	}
+else 
+	{
+	System.out.println("the both no are not divisible by 2 and 5");
+	} 
+System.out.println("logical or explaination");
+if(i%2==0||j%5==0)
+	{
+	System.out.println("the any of the  numbers are divisible by 2 and 5");
+	}
+else 
+	{
+	System.out.println("the any of the numbers are not divisible by 2 and 5");
+	} 
+System.out.println("logical not explaination");
+if(i!=2)
+{
+System.out.println("the no i is not 2");
+}
+
+
+}
+}
+
+//***************************************************************************************************************************************
+
+
+import java.util.Scanner;
+class Ex_even_odd
+{
+
+public static void main(String[] arg)
+{
+Scanner sc=new Scanner(System.in);
+Ex_even_odd no=new Ex_even_odd();
+int i=sc.nextInt();
+if(i%2==0)
+	{
+	System.out.println("the number "+i+" is even");
+	}
+else
+	{
+	System.out.println("the number "+i+" is odd");
+	} 
+}
+}
+
+//*********************************************************************************************************************
+
+
